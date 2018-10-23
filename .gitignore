@@ -103,8 +103,11 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+#exercism
+*.solution.json
+
 # gradle build
-.gradle
+*.gradle
 /build/
 
 # Ignore Gradle GUI config
@@ -118,3 +121,6 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+
+# Pycharm .idea
+.idea/
