@@ -4,13 +4,16 @@ class Allergies(object):
         self.score = score
 
     def is_allergic_to(self, item):
-        print(self.lst)
-        pass
+        return item in self.lst
 
     @property
     def lst(self):
-        allergy_dict = {}
-        allergy_dict]"eggs"
+        allergy_test = ["eggs", "peanuts", "shellfish", "strawberries",
+                        "tomatoes", "chocolate", "pollen", "cats"]
         allergy_list = []
-        allergy_list.append("eggs") if self.score & 1 else
+
+        for val, allergy in enumerate(allergy_test):
+            if 2**val & self.score:
+                allergy_list.append(allergy)
+
         return allergy_list
