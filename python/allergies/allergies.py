@@ -1,4 +1,6 @@
 class Allergies(object):
+    ALLERGY_TEST = ["eggs", "peanuts", "shellfish", "strawberries",
+                    "tomatoes", "chocolate", "pollen", "cats"]
 
     def __init__(self, score):
         self.score = score
@@ -8,12 +10,11 @@ class Allergies(object):
 
     @property
     def lst(self):
-        allergy_test = ["eggs", "peanuts", "shellfish", "strawberries",
-                        "tomatoes", "chocolate", "pollen", "cats"]
+
         allergy_list = []
 
-        for val, allergy in enumerate(allergy_test):
-            if 2**val & self.score:
+        for val, allergy in enumerate(self.ALLERGY_TEST):
+            if 1 << val & self.score:
                 allergy_list.append(allergy)
 
         return allergy_list
