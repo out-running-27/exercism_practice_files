@@ -105,6 +105,7 @@ venv.bak/
 
 #exercism
 *.solution.json
+*.exercism
 
 # gradle build
 *.gradle
