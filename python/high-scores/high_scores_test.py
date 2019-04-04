@@ -17,11 +17,6 @@ class HighScoreTest(unittest.TestCase):
         expected = 30
         self.assertEqual(HighScores(scores).latest(), expected)
 
-    def test_latest_score_empty(self):
-        scores = []
-        expected = None
-        self.assertEqual(HighScores(scores).latest(), expected)
-
     def test_personal_best(self):
         scores = [40, 100, 70]
         expected = 100

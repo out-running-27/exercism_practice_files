@@ -9,19 +9,17 @@ class HighScores(object):
         """
         Returns int that is the last score from the list scores, None if empty
         """
-        return self.scores[-1] if self.scores else None
+        return self.scores[-1]
 
     def personal_best(self):
         """
-        returns the highest integer from list scores, None if empty
+        returns the highest integer from list scores
         """
-        return max(self.scores) if self.scores else None
+        return max(self.scores)
 
     def personal_top_three(self):
         """
         returns the highest three integers from list scores.
         if less than 3 scores are available, then returns an ordered list of all elements
         """
-        rank = min(len(self.scores), 3)
-        ranked_scores = sorted(self.scores, reverse=True)
-        return ranked_scores[:rank] if self.scores else []
+        return sorted(self.scores, reverse=True)[:3]
